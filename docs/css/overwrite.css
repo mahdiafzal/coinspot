@@ -1,0 +1,16 @@
+a.border-icon {
+    padding: 5px 7px;
+}
+
+.ls + .header_white {
+    border-top: none;
+}
+
+@media (max-width: 991px){
+    .page_toplogo .toggle_menu {
+        background-color: #bf3654;
+    }
+    .page_toplogo .toggle_menu:before, .page_toplogo .toggle_menu span, .page_toplogo .toggle_menu span:before, .page_toplogo .toggle_menu span:after {
+        background-color: #fff;
+    }
+}
