@@ -1,3 +1,7 @@
+body {
+    font-family: "IRANSans";
+}
+
 a.border-icon {
     padding: 5px 7px;
 }
@@ -6,11 +10,21 @@ a.border-icon {
     border-top: none;
 }
 
-@media (max-width: 991px){
+@media (max-width: 991px) {
     .page_toplogo .toggle_menu {
         background-color: #bf3654;
     }
     .page_toplogo .toggle_menu:before, .page_toplogo .toggle_menu span, .page_toplogo .toggle_menu span:before, .page_toplogo .toggle_menu span:after {
         background-color: #fff;
     }
+}
+
+@media (min-width: 992px) {
+    .sf-menu, .sf-menu ul {
+        direction: rtl;
+    }
+}
+
+.sf-menu a {
+    letter-spacing: 0;
 }
