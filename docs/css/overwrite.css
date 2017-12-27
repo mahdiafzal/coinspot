@@ -27,7 +27,7 @@ a.border-icon {
     direction: ltr !important;
 }
 
-.ls + .header_white {
+.ls+.header_white {
     border-top: none;
 }
 
@@ -35,22 +35,39 @@ a.border-icon {
     padding: 0 !important;
 }
 
+.noselect {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 @media (max-width: 991px) {
     .page_toplogo .toggle_menu {
         background-color: #bf3654;
     }
-    .page_toplogo .toggle_menu:before, .page_toplogo .toggle_menu span, .page_toplogo .toggle_menu span:before, .page_toplogo .toggle_menu span:after {
+    .page_toplogo .toggle_menu:before,
+    .page_toplogo .toggle_menu span,
+    .page_toplogo .toggle_menu span:before,
+    .page_toplogo .toggle_menu span:after {
         background-color: #fff;
     }
 }
 
 @media (min-width: 992px) {
-    .sf-menu, .sf-menu ul {
+    .sf-menu,
+    .sf-menu ul {
         direction: rtl;
     }
 }
 
-.sf-menu a, .theme_buttons a, .theme_button, .wc-proceed-to-checkout .checkout-button, .buttons a, button, input[type="submit"] {
+.sf-menu a,
+.theme_buttons a,
+.theme_button,
+.wc-proceed-to-checkout .checkout-button,
+.buttons a,
+button,
+input[type="submit"] {
     letter-spacing: 0;
 }
 
@@ -59,9 +76,54 @@ a.border-icon {
     padding-left: 20px;
 }
 
-input[type="text"] + .theme_button, input[type="email"] + .theme_button, input[type="url"] + .theme_button, input[type="password"] + .theme_button, input[type="search"] + .theme_button, input[type="tel"] + .theme_button, input[type="number"] + .theme_button, input[type="date"] + .theme_button, textarea + .theme_button, select + .theme_button, .form-control + .theme_button {
+input[type="text"]+.theme_button,
+input[type="email"]+.theme_button,
+input[type="url"]+.theme_button,
+input[type="password"]+.theme_button,
+input[type="search"]+.theme_button,
+input[type="tel"]+.theme_button,
+input[type="number"]+.theme_button,
+input[type="date"]+.theme_button,
+textarea+.theme_button,
+select+.theme_button,
+.form-control+.theme_button {
     right: 0;
     left: auto;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+textarea,
+select,
+.form-control {
+    letter-spacing: 0 !important;
+}
+
+.form-control:-moz-placeholder {
+    letter-spacing: 0;
+}
+
+.form-control::-moz-placeholder {
+    letter-spacing: 0;
+}
+
+.form-control:-ms-input-placeholder {
+    letter-spacing: 0;
+}
+
+.form-control::-webkit-input-placeholder {
+    letter-spacing: 0;
+}
+
+.form-control[disabled],
+fieldset[disabled] .form-control {
+    cursor: default;
 }
 
 .transferChange {
@@ -82,4 +144,9 @@ input[type="text"] + .theme_button, input[type="email"] + .theme_button, input[t
 .transferChange:hover {
     color: #fff !important;
     background: #bf3654;
+    transition: all 0.05s linear 0s;
+}
+
+.canvas-arrow-wrap .canvas-arrow {
+    transform: rotateY(180deg);
 }
