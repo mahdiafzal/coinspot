@@ -52,6 +52,16 @@ a.border-icon {
     user-select: none;
 }
 
+.fixed__bg {
+    background-color: #eee;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding-top: 100%;
+    height: 0;
+}
+
 @media (max-width: 991px) {
     .page_toplogo .toggle_menu {
         background-color: #bf3654;
@@ -213,4 +223,35 @@ a.soc-aparat.bg-icon:hover,
 .page_copyright .small-text {
     font-size: 12px;
     font-weight: 400;
+}
+
+.entry-title {
+    line-height: 1.6;
+}
+
+h4.entry-title {
+    font-size: 18px;
+}
+
+/* Blog */
+.vertical-item.content-padding .item-content {
+    padding: 35px 15px 15px;
+}
+
+@media (min-width: 400px) {
+    .vertical-item.content-padding .item-content {
+        padding: 35px 15px 15px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .vertical-item.big-padding .item-content {
+        padding: 35px 20px 15px;
+    }
+}
+
+.content-3lines-ellipsis {
+    font-size: 13px;
+    line-height: 1.6em;
+    height: 75px;
 }
