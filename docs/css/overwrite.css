@@ -1,15 +1,20 @@
 body {
     font-family: "IRANSans";
     font-size: 15px;
+    direction: rtl;
+}
+
+p {
+    direction: rtl;
+}
+
+h4 {
+    font-size: 20px;
 }
 
 [class*="col-"] {
     margin-top: 5px;
     margin-bottom: 5px;
-}
-
-h4 {
-    font-size: 20px;
 }
 
 .form-group {
@@ -165,8 +170,7 @@ fieldset[disabled] .form-control {
 }
 
 .small-text {
-    font-weight: 700;
-    font-size: 20px;
+    font-weight: 500;
     margin-top: 10px;
     letter-spacing: 0;
 }
@@ -174,4 +178,39 @@ fieldset[disabled] .form-control {
 .small-text+.section_header {
     font-size: 30px;
     margin-top: 20px;
+}
+
+.page_footer .widget>h3,
+.page_footer .widget-title {
+    font-size: 28px;
+
+}
+
+a.color-icon.soc-telegram {
+    color: #0088cc;
+}
+
+.color-bg-icon.soc-telegram,
+a.soc-telegram.bg-icon:hover,
+.soc-telegram.color-icon.border-icon:hover {
+    background-color: #0088cc;
+}
+
+a.color-icon.soc-aparat {
+    color: #ed145b;
+}
+
+.color-bg-icon.soc-aparat,
+a.soc-aparat.bg-icon:hover,
+.soc-aparat.color-icon.border-icon:hover {
+    background-color: #ffffff;
+}
+
+.dateTime {
+    margin-right: -14px;
+}
+
+.page_copyright .small-text {
+    font-size: 12px;
+    font-weight: 400;
 }
