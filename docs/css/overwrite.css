@@ -107,6 +107,7 @@ input[type="date"],
 textarea,
 select,
 .form-control {
+    font-weight: 500;
     letter-spacing: 0 !important;
 }
 
@@ -154,4 +155,23 @@ fieldset[disabled] .form-control {
 
 .canvas-arrow-wrap .canvas-arrow {
     transform: rotateY(180deg);
+}
+
+@media (max-width: 767px) {
+    .step_teaser .canvas-arrow-wrap .canvas-arrow {
+        -webkit-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+    }
+}
+
+.small-text {
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: 10px;
+    letter-spacing: 0;
+}
+
+.small-text+.section_header {
+    font-size: 30px;
+    margin-top: 20px;
 }
