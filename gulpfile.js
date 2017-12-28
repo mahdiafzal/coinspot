@@ -8,7 +8,7 @@ gulp.task('server', () =>
     ui: false,
     server: {
       baseDir: ['./docs/'],
-      index: 'processing.html'
+      index: 'index.html'
     }
   })
 )
