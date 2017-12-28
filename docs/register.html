@@ -175,11 +175,10 @@
                                     <span class="input-group-btn">
                                         <span class="theme_button color1 btn-file">
                                             انتخاب کن!
-                                            <input id="imgInp" type="file" accept="image/x-png,image/gif,image/jpeg" class="" name="validPhoto" id="validPhoto"
-                                                placeholder="" value="">
+                                            <input type="file" id="imgInp">
                                         </span>
                                     </span>
-                                    <input type="text" class="form-control ltr" readonly aria-required="true">
+                                    <input type="text" class="form-control ltr" readonly name="validPhoto" id="validPhoto" aria-required="true">
                                 </div>
 
 
@@ -343,22 +342,6 @@
                     if (log) alert(log);
                 }
 
-            });
-
-            function readURL(input) {
-                if (input.files && input.files[0]) {
-                    var reader = new FileReader();
-
-                    reader.onload = function (e) {
-                        $('#img-upload').attr('src', e.target.result);
-                    }
-
-                    reader.readAsDataURL(input.files[0]);
-                }
-            }
-
-            $("#imgInp").change(function () {
-                readURL(this);
             });
         });
     </script>
