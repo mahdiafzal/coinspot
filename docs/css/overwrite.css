@@ -328,3 +328,7 @@ h4.entry-title {
     cursor: pointer;
     display: block;
 }
+
+.product-total {
+    font-weight: 500;
+}
