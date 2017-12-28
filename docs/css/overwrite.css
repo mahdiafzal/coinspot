@@ -294,3 +294,15 @@ h4.entry-title {
     right: auto;
     left: 0;
 }
+
+.coin-form-respond {
+    display: block;
+    font-weight: 500;
+}
+
+.coin-form-respond:before {
+    font-family: 'rt-icons-2';
+    font-weight: 600;
+    content: "\e71a";
+    padding-left: 5px;
+}

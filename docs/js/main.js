@@ -531,6 +531,44 @@ function windowLoadInit() {
 		})
 	});
 
+	jQuery('form.coin-register').on('submit', function (e) {
+		e.preventDefault();
+		var $form = jQuery(this);
+		jQuery($form).find('span.coin-form-respond').remove();
+
+		//checking on empty values
+		jQuery($form).find('[aria-required="true"], [required]').each(function (index) {
+			var $thisRequired = jQuery(this);
+			if (!$thisRequired.val().length) {
+				$thisRequired
+					.addClass('invalid')
+					.on('focus', function () {
+						$thisRequired
+							.removeClass('invalid');
+					});
+			}
+		});
+		//if one of form fields is empty - exit
+		if ($form.find('[aria-required="true"], [required]').hasClass('invalid')) {
+			return;
+		}
+
+		//sending form data to PHP server if fields are not empty
+		var request = $form.serialize();
+		var ajax = jQuery.post("", request)
+			.done(function (data) {
+				jQuery($form).find('[type="submit"]').attr('disabled', false).parent().append('<span class="coin-form-respond highlight topmargin_10">' + data + '</span>');
+				//cleaning form
+				var $formErrors = $form.find('.form-errors');
+				if (!$formErrors.length) {
+					$form[0].reset();
+				}
+			})
+			.fail(function (data) {
+				jQuery($form).find('[type="submit"]').attr('disabled', false).parent().append('<span class="coin-form-respond highlight topmargin_10">متاسفانه ثبت نام با انجام نشد. لطفا دوباره اقدام نمایید.</span>');
+			})
+	});
+
 
 	//search modal
 	jQuery(".search_modal_button").on('click', function(e){
