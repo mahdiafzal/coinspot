@@ -170,7 +170,19 @@
                                     <span class="grey">تصویر کد ملی و کارت بانکی:</span>
                                     <span class="required">*</span>
                                 </label>
-                                <input type="text" class="form-control" name="validPhoto" id="validPhoto" placeholder="" value="" aria-required="true">
+
+                                <div class="input-group">
+                                    <span class="input-group-btn">
+                                        <span class="theme_button color1 btn-file">
+                                            انتخاب کن!
+                                            <input id="imgInp" type="file" accept="image/x-png,image/gif,image/jpeg" class="" name="validPhoto" id="validPhoto"
+                                                placeholder="" value="">
+                                        </span>
+                                    </span>
+                                    <input type="text" class="form-control ltr" readonly aria-required="true">
+                                </div>
+
+
                             </div>
 
                             <div class="col-sm-6 form-group" id="password_field">
@@ -192,7 +204,7 @@
                             <div class="col-sm-12">
                                 <button type="submit" class="theme_button wide_button color1 topmargin_40">ثبت نام</button>
                                 <button type="reset" class="theme_button wide_button">پاک کردن فرم</button>
-                                
+
                                 <div class="lost_password topmargin_20">
                                     <a href="login.html">اگر قبلا ثبت نام کرده‌اید، کلیک کنید!</a>
                                 </div>
@@ -312,6 +324,43 @@
 
         password.onchange = validatePassword;
         confirm_password.onkeyup = validatePassword;
+
+        $(document).ready(function () {
+            $(document).on('change', '.btn-file :file', function () {
+                var input = $(this),
+                    label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+                input.trigger('fileselect', [label]);
+            });
+
+            $('.btn-file :file').on('fileselect', function (event, label) {
+
+                var input = $(this).parents('.input-group').find(':text'),
+                    log = label;
+
+                if (input.length) {
+                    input.val(log);
+                } else {
+                    if (log) alert(log);
+                }
+
+            });
+
+            function readURL(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        $('#img-upload').attr('src', e.target.result);
+                    }
+
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+
+            $("#imgInp").change(function () {
+                readURL(this);
+            });
+        });
     </script>
 
 </body>
