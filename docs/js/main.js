@@ -617,7 +617,7 @@ function windowLoadInit() {
 		e.preventDefault();
 		var $form = jQuery(this);
 		// update user interface
-		$form.find('.response').html('Adding email address...');
+		$form.find('.response').html('شما در خبرنامه عضو شدید!');
 		// Prepare query string and send AJAX request
 		jQuery.ajax({
 			url: 'mailchimp/store-address.php',
