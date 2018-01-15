@@ -6,12 +6,12 @@
 
 1. Get the sourcecode:
     ```
-    $ git clone https://github.com/dashtinejad/aftabmarket.git
+    $ git clone https://github.com/dashtinejad/coinspot.git
     ```
 
 2. Switch to its directory:
     ```
-    $ cd aftabmarket
+    $ cd coinspot
     ```
 
 3. Run `npm install` command, it will install dependencies:
