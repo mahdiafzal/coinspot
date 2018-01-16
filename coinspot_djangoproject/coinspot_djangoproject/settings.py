@@ -49,7 +49,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'coinspot.urls'
+ROOT_URLCONF = 'coinspot_djangoproject.urls'
 
 TEMPLATES = [
     {
@@ -67,7 +67,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'coinspot.wsgi.application'
+WSGI_APPLICATION = 'coinspot_djangoproject.wsgi.application'
 
 
 # Database
