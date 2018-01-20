@@ -340,11 +340,11 @@ h4.entry-title {
 }
 
 .section_header {
-    font-size: 30px;
+    font-size: 20px;
 }
 
 @media (min-width: 1200px) {
     .section_header {
-        font-size: 36px;
+        font-size: 25px;
     }
 }
