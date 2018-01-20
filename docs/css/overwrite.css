@@ -332,3 +332,9 @@ h4.entry-title {
 .product-total {
     font-weight: 500;
 }
+
+.disable {
+    color: #ccc !important;
+    cursor: default !important;
+    pointer-events: none !important;
+}
