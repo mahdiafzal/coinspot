@@ -338,3 +338,13 @@ h4.entry-title {
     cursor: default !important;
     pointer-events: none !important;
 }
+
+.section_header {
+    font-size: 30px;
+}
+
+@media (min-width: 1200px) {
+    .section_header {
+        font-size: 36px;
+    }
+}
