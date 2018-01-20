@@ -348,3 +348,7 @@ h4.entry-title {
         font-size: 25px;
     }
 }
+
+.section_about.background_cover {
+    background-position: right center;
+}
