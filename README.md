@@ -6,7 +6,7 @@
 
 1. Get the sourcecode:
     ```
-    $ git clone https://github.com/dashtinejad/coinspot.git
+    $ git clone https://github.com/mahdiafzal/coinspot.git
     ```
 
 2. Switch to its directory:
